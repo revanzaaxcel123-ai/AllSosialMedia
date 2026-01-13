@@ -2,9 +2,9 @@
 <html lang="id">
 <head>
   <meta charset="utf-8">
-  <title>Follow Sosial Media — VanzShop.com</title>
+  <title>Sosial Media — VanzShop.com</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Follow Sosial Media VanzShop.com — Instagram, WhatsApp, Telegram, Shopee, YouTube. Join Channel Telegram & Grup WhatsApp.">
+  <meta name="description" content="Ikuti sosial media resmi VanzShop.com. Instagram, WhatsApp, Telegram, Shopee, YouTube.">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
@@ -19,7 +19,7 @@
       --text-muted:#b3b3c2;
       --border-soft:rgba(255,255,255,0.06);
       --radius-card:32px;
-      --radius-btn:18px;
+      --radius-btn:20px;
       --shadow-soft:0 28px 80px rgba(0,0,0,0.9);
     }
 
@@ -36,7 +36,7 @@
       overflow-x:hidden;
     }
 
-    /* ===== Background style (KEEP) ===== */
+    /* ===== Background style (SAME) ===== */
     .page-bg{
       position:fixed;
       inset:0;
@@ -61,6 +61,7 @@
       mix-blend-mode:screen;
       opacity:.9;
     }
+
     .orb{
       position:fixed;
       border-radius:999px;
@@ -96,165 +97,173 @@
         var(--card);
       border-radius:var(--radius-card);
       box-shadow:var(--shadow-soft);
-      padding:30px 24px 28px;
+      padding:32px 26px 26px;
       border:1px solid rgba(255,255,255,0.04);
     }
 
-    /* LOGO (SVG) */
-    .logo-wrap{
-      display:flex;
-      justify-content:center;
-      margin-bottom:14px;
-    }
+    /* ===== Header ===== */
+    .logo-wrap{display:flex;justify-content:center;margin-bottom:14px;}
     .logo-circle{
-      width:92px;
-      height:92px;
-      border-radius:999px;
-      overflow:hidden;
+      width:92px;height:92px;border-radius:999px;overflow:hidden;
       background:radial-gradient(circle at 30% 20%, #fff7c8 0%, #ffe083 35%, #d4a937 70%, #7f6518 100%);
       border:2px solid rgba(255,220,140,0.6);
       box-shadow:
         0 15px 40px rgba(0,0,0,0.85),
         inset 0 6px 10px rgba(255,255,255,0.22),
         inset 0 -6px 10px rgba(0,0,0,0.45);
-      display:flex;
-      align-items:center;
-      justify-content:center;
+      display:flex;align-items:center;justify-content:center;
     }
-    .logo-svg{
-      width:74px;
-      height:74px;
-      display:block;
-      filter:drop-shadow(0 8px 18px rgba(0,0,0,.45));
+    .logo-circle img{
+      width:97%;height:97%;object-fit:contain;border-radius:50%;
     }
 
-    .headline-wrap{
-      text-align:center;
-      margin-bottom:18px;
-    }
-    .headline-wrap h1{
+    .headline{text-align:center;margin:0 0 18px;}
+    .headline h1{
       margin:6px 0 6px;
-      font-size:1.55rem;
+      font-size:1.65rem;
       color:var(--accent-strong);
-      line-height:1.15;
+      letter-spacing:.2px;
     }
-    .tagline{
+    .subtitle{
       margin:0;
-      font-size:.92rem;
       color:var(--text-muted);
+      font-size:.96rem;
       line-height:1.6;
     }
     .badge{
-      display:inline-flex;
-      align-items:center;
-      gap:6px;
-      padding:4px 10px;
+      display:inline-flex;align-items:center;gap:8px;
+      padding:5px 12px;
       border-radius:999px;
       background:var(--accent-soft);
       color:var(--accent-strong);
       font-size:.78rem;
+      margin-bottom:10px;
     }
 
-    /* BUTTON BASE (SAMA) */
-    .link-btn{
+    /* ===== List buttons (rapi kayak contoh) ===== */
+    .list{display:flex;flex-direction:column;gap:12px;margin-top:10px;}
+    .row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
       width:100%;
-      border:none;
-      outline:none;
       text-decoration:none;
-      display:flex;
-      justify-content:flex-start;
-      align-items:center;
-      padding:12px 16px;
-      border-radius:var(--radius-btn);
-      cursor:pointer;
-      background:#101018;
-      border:1px solid var(--border-soft);
       color:var(--text);
-      transition:transform .1s ease-out,box-shadow .12s ease-out,border-color .12s ease-out,background .12s ease-out;
-      margin-top:10px;
+      padding:14px 16px;
+      border-radius:22px;
+      background:rgba(16,16,24,.72);
+      border:1px solid rgba(255,255,255,0.06);
+      transition:transform .12s ease, border-color .12s ease, background .12s ease, box-shadow .12s ease;
     }
-    .link-btn:hover{
+    .row:hover{
       transform:translateY(-1px);
-      box-shadow:0 16px 38px rgba(0,0,0,0.9);
-      border-color:rgba(247,212,106,0.6);
+      border-color:rgba(247,212,106,0.40);
       background:linear-gradient(135deg,#181821,#1d1d25);
-    }
-    .link-btn-primary{
-      background:linear-gradient(135deg,#2b2412,#141419);
-      border-color:rgba(247,212,106,0.6);
-      box-shadow:0 12px 30px rgba(0,0,0,0.9);
-      animation:pulse 2.8s infinite ease-in-out;
-    }
-    .link-btn-primary:hover{
-      background:linear-gradient(135deg,#3c3217,#171722);
-    }
-    @keyframes pulse{
-      0%{box-shadow:0 0 0 rgba(247,212,106,0);}
-      50%{box-shadow:0 0 18px rgba(247,212,106,0.35);}
-      100%{box-shadow:0 0 0 rgba(247,212,106,0);}
+      box-shadow:0 18px 48px rgba(0,0,0,.85);
     }
 
-    .btn-content{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-    }
-    .btn-icon{
-      width:32px;
-      height:32px;
-      border-radius:999px;
-      background:rgba(11,14,40,0.95);
+    .left{
       display:flex;
       align-items:center;
-      justify-content:center;
-      color:#ffffff;
+      gap:14px;
+      min-width:0;
+    }
+
+    .ico{
+      width:42px;height:42px;border-radius:14px;
+      background:rgba(11,14,40,0.90);
+      border:1px solid rgba(255,255,255,0.06);
+      display:flex;align-items:center;justify-content:center;
       flex:0 0 auto;
     }
-    .btn-icon svg{
-      width:18px;
-      height:18px;
-      display:block;
-    }
-    .btn-text{
-      font-size:.96rem;
-      font-weight:500;
-      letter-spacing:.01em;
+    .ico svg{width:22px;height:22px;display:block;}
+
+    .label{
+      font-size:1.03rem;
+      font-weight:600;
+      letter-spacing:.2px;
       white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
     }
-    .btn-pill{
+    .hint{
+      display:block;
+      margin-top:2px;
+      font-size:.82rem;
+      color:rgba(255,255,255,.58);
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    .right{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex:0 0 auto;
+      color:rgba(255,255,255,.70);
+    }
+    .arrow{
+      width:18px;height:18px;opacity:.85;
+    }
+
+    /* Primary row */
+    .row.primary{
+      background:linear-gradient(135deg,#2b2412,#141419);
+      border-color:rgba(247,212,106,0.55);
+      box-shadow:0 14px 36px rgba(0,0,0,.85);
+    }
+    .row.primary:hover{
+      border-color:rgba(247,212,106,0.8);
+      background:linear-gradient(135deg,#3c3217,#171722);
+    }
+    .pill{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      padding:2px 8px;
+      padding:3px 10px;
       border-radius:999px;
-      background:rgba(0,0,0,0.4);
-      border:1px solid rgba(247,212,106,0.6);
-      font-size:.7rem;
-      margin-left:6px;
+      font-size:.72rem;
+      background:rgba(0,0,0,0.35);
+      border:1px solid rgba(247,212,106,0.55);
       color:var(--accent-strong);
+      margin-left:10px;
       white-space:nowrap;
     }
 
-    .section-title{
+    /* Footer / back link */
+    .back{
       margin-top:18px;
-      font-size:11px;
-      letter-spacing:.32em;
-      opacity:.65;
       text-align:center;
-      user-select:none;
+    }
+    .back a{
+      color:rgba(255,255,255,.65);
+      text-decoration:none;
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding:8px 10px;
+      border-radius:999px;
+      transition:color .12s ease, background .12s ease;
+    }
+    .back a:hover{
+      color:#fff;
+      background:rgba(255,255,255,.06);
     }
 
     .footer-note{
-      margin-top:18px;
+      margin-top:16px;
       text-align:center;
-      font-size:.8rem;
+      font-size:.82rem;
       color:var(--text-muted);
       opacity:.9;
     }
 
     @media(max-width:480px){
-      .headline-wrap h1{font-size:1.35rem;}
-      .btn-text{font-size:.9rem;}
+      .card{padding:28px 20px 22px;}
+      .headline h1{font-size:1.45rem;}
+      .label{font-size:1rem;}
+      .ico{width:40px;height:40px;border-radius:13px;}
     }
   </style>
 </head>
@@ -269,162 +278,182 @@
 
   <main class="shell">
     <section class="card">
+
       <div class="logo-wrap">
-        <div class="logo-circle" aria-label="Logo VanzShop (SVG)">
-          <!-- SVG LOGO (inline, siap tampil). Replace kalau mau logo asli -->
-          <svg class="logo-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="VanzShop">
-            <defs>
-              <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#111118"/>
-                <stop offset="1" stop-color="#0a0a12"/>
-              </linearGradient>
-              <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#ffefb0"/>
-                <stop offset="0.45" stop-color="#f7d46a"/>
-                <stop offset="1" stop-color="#9e7c1d"/>
-              </linearGradient>
-            </defs>
-            <circle cx="60" cy="60" r="52" fill="url(#g1)" stroke="url(#gold)" stroke-width="6"/>
-            <path d="M30 72 L52 38 L64 58 L78 34 L92 72" fill="none" stroke="url(#gold)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="60" cy="80" r="3.5" fill="#ffdf7a" opacity=".95"/>
-            <text x="60" y="98" text-anchor="middle" font-family="Inter, system-ui" font-size="14" fill="#ffdf7a" font-weight="700">VANZ</text>
-          </svg>
+        <div class="logo-circle">
+          <!-- kalau lu mau ganti jadi svg, ganti IMG ke SVG -->
+          <img src="logo.png" alt="Logo VanzShop.com">
         </div>
       </div>
 
-      <div class="headline-wrap">
-        <div class="badge">📲 Follow Sosial Media Kami</div>
+      <div class="headline">
+        <div class="badge">
+          <!-- spark icon -->
+          <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+            <path d="M12 2l1.4 5.3L19 9l-5.6 1.7L12 16l-1.4-5.3L5 9l5.6-1.7L12 2z" fill="currentColor" opacity=".95"/>
+          </svg>
+          Ikuti Sosial Media Resmi Kami
+          <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+            <path d="M12 2l1.4 5.3L19 9l-5.6 1.7L12 16l-1.4-5.3L5 9l5.6-1.7L12 2z" fill="currentColor" opacity=".95"/>
+          </svg>
+        </div>
         <h1>VanzShop.com</h1>
-        <p class="tagline">
-          Stay update promo, info produk, dan support cepat. Pilih platform favorit kamu di bawah.
-        </p>
+        <p class="subtitle">Semua link resmi ada di sini. Klik & langsung ke platformnya.</p>
       </div>
 
-      <!-- Tombol utama -->
-      <a class="link-btn link-btn-primary"
-         href="https://chat.whatsapp.com/DQ2PsowpGt5FxhQDAS2sAz?mode=r_t"
-         target="_blank" rel="noopener">
-        <span class="btn-content">
-          <span class="btn-icon">
-            <!-- whatsapp icon -->
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 4a7 7 0 0 0-6.06 10.5L5 20l3.7-1.88A7 7 0 1 0 12 4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
-              <path d="M10.6 9.1l.4 1.3a1.2 1.2 0 0 1-.2 1l-.3.4a3.8 3.8 0 0 0 1.9 1.9l.4-.3a1.2 1.2 0 0 1 1-.2l1.3.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <div class="list">
+        <!-- WA GROUP (PRIMARY) -->
+        <a class="row primary" href="https://chat.whatsapp.com/DQ2PsowpGt5FxhQDAS2sAz?mode=r_t" target="_blank" rel="noopener">
+          <div class="left">
+            <div class="ico" aria-hidden="true">
+              <!-- WhatsApp (SVG) -->
+              <svg viewBox="0 0 24 24">
+                <path d="M12 4a7 7 0 0 0-6.06 10.5L5 20l3.7-1.88A7 7 0 1 0 12 4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                <path d="M10.6 9.1l.4 1.3a1.2 1.2 0 0 1-.2 1l-.3.4a3.8 3.8 0 0 0 1.9 1.9l.4-.3a1.2 1.2 0 0 1 1-.2l1.3.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div style="min-width:0">
+              <div class="label">Grup WhatsApp <span class="pill">Join & Order</span></div>
+              <span class="hint">Tempat order + fast respon</span>
+            </div>
+          </div>
+          <div class="right" aria-hidden="true">
+            <svg class="arrow" viewBox="0 0 24 24">
+              <path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-          </span>
-          <span class="btn-text">
-            Join Grup WhatsApp
-            <span class="btn-pill">Order & Support</span>
-          </span>
-        </span>
-      </a>
+          </div>
+        </a>
 
-      <div class="section-title">SOCIAL LINKS</div>
+        <!-- Instagram -->
+        <a class="row" href="https://instagram.com/revanza_axcell" target="_blank" rel="noopener">
+          <div class="left">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="6" y="6" width="12" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="12" cy="12" r="3.1" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="16.2" cy="7.8" r="0.9" fill="currentColor"/>
+              </svg>
+            </div>
+            <div style="min-width:0">
+              <div class="label">Instagram Resmi</div>
+              <span class="hint">@revanza_axcell</span>
+            </div>
+          </div>
+          <div class="right" aria-hidden="true">
+            <svg class="arrow" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </a>
 
-      <!-- Instagram -->
-      <a class="link-btn"
-         href="https://instagram.com/revanza_axcell"
-         target="_blank" rel="noopener">
-        <span class="btn-content">
-          <span class="btn-icon">
-            <!-- instagram -->
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <rect x="6" y="6" width="12" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/>
-              <circle cx="12" cy="12" r="3.1" fill="none" stroke="currentColor" stroke-width="1.6"/>
-              <circle cx="16.2" cy="7.8" r="0.9" fill="currentColor"/>
-            </svg>
-          </span>
-          <span class="btn-text">Instagram <span class="btn-pill">@revanza_axcell</span></span>
-        </span>
-      </a>
+        <!-- WhatsApp Chat -->
+        <a class="row" href="https://wa.me/62895415204928" target="_blank" rel="noopener">
+          <div class="left">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 4a7 7 0 0 0-6.06 10.5L5 20l3.7-1.88A7 7 0 1 0 12 4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                <path d="M10.6 9.1l.4 1.3a1.2 1.2 0 0 1-.2 1l-.3.4a3.8 3.8 0 0 0 1.9 1.9l.4-.3a1.2 1.2 0 0 1 1-.2l1.3.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div style="min-width:0">
+              <div class="label">WhatsApp Admin</div>
+              <span class="hint">0895415204928</span>
+            </div>
+          </div>
+          <div class="right" aria-hidden="true">
+            <svg class="arrow" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </a>
 
-      <!-- WhatsApp direct chat -->
-      <a class="link-btn"
-         href="https://wa.me/62895415204928"
-         target="_blank" rel="noopener">
-        <span class="btn-content">
-          <span class="btn-icon">
-            <!-- whatsapp -->
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 4a7 7 0 0 0-6.06 10.5L5 20l3.7-1.88A7 7 0 1 0 12 4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
-              <path d="M10.6 9.1l.4 1.3a1.2 1.2 0 0 1-.2 1l-.3.4a3.8 3.8 0 0 0 1.9 1.9l.4-.3a1.2 1.2 0 0 1 1-.2l1.3.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-          <span class="btn-text">WhatsApp <span class="btn-pill">0895415204928</span></span>
-        </span>
-      </a>
+        <!-- Telegram User -->
+        <a class="row" href="https://t.me/VanzzSkyyID" target="_blank" rel="noopener">
+          <div class="left">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M21 5L3.8 11.6c-.7.3-.7 1.3.1 1.5l4.5 1.3 1.7 4.7c.2.7 1.1.8 1.5.2l2.6-3.2 4.3 3.2c.5.4 1.3.1 1.4-.6L22 6.2c.1-.9-.7-1.6-1.5-1.2Z"
+                      fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+                <path d="M8.4 14.4l11-8.1" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div style="min-width:0">
+              <div class="label">Telegram Resmi</div>
+              <span class="hint">@VanzzSkyyID</span>
+            </div>
+          </div>
+          <div class="right" aria-hidden="true">
+            <svg class="arrow" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </a>
 
-      <!-- Telegram user -->
-      <a class="link-btn"
-         href="https://t.me/VanzzSkyyID"
-         target="_blank" rel="noopener">
-        <span class="btn-content">
-          <span class="btn-icon">
-            <!-- telegram -->
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M21 5L3.8 11.6c-.7.3-.7 1.3.1 1.5l4.5 1.3 1.7 4.7c.2.7 1.1.8 1.5.2l2.6-3.2 4.3 3.2c.5.4 1.3.1 1.4-.6L22 6.2c.1-.9-.7-1.6-1.5-1.2Z"
-                    fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
-              <path d="M8.4 14.4l11-8.1" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-            </svg>
-          </span>
-          <span class="btn-text">Telegram <span class="btn-pill">@VanzzSkyyID</span></span>
-        </span>
-      </a>
+        <!-- Telegram Channel -->
+        <a class="row" href="https://t.me/VanzINFO" target="_blank" rel="noopener">
+          <div class="left">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M21 5L3.8 11.6c-.7.3-.7 1.3.1 1.5l4.5 1.3 1.7 4.7c.2.7 1.1.8 1.5.2l2.6-3.2 4.3 3.2c.5.4 1.3.1 1.4-.6L22 6.2c.1-.9-.7-1.6-1.5-1.2Z"
+                      fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+                <path d="M8.4 14.4l11-8.1" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div style="min-width:0">
+              <div class="label">Telegram Channel</div>
+              <span class="hint">t.me/VanzINFO</span>
+            </div>
+          </div>
+          <div class="right" aria-hidden="true">
+            <svg class="arrow" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </a>
 
-      <!-- YouTube -->
-      <a class="link-btn"
-         href="https://www.youtube.com/@revanzaaxcell"
-         target="_blank" rel="noopener">
-        <span class="btn-content">
-          <span class="btn-icon">
-            <!-- youtube -->
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M21 12s0-3.6-.5-5a2.7 2.7 0 0 0-1.9-1.9C17.2 4.7 12 4.7 12 4.7s-5.2 0-6.6.4A2.7 2.7 0 0 0 3.5 7C3 8.4 3 12 3 12s0 3.6.5 5a2.7 2.7 0 0 0 1.9 1.9c1.4.4 6.6.4 6.6.4s5.2 0 6.6-.4a2.7 2.7 0 0 0 1.9-1.9c.5-1.4.5-5 .5-5Z"
-                    fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
-              <path d="M10.5 9.7l5 2.3-5 2.3V9.7z" fill="currentColor"/>
-            </svg>
-          </span>
-          <span class="btn-text">YouTube <span class="btn-pill">@revanzaaxcell</span></span>
-        </span>
-      </a>
+        <!-- YouTube -->
+        <a class="row" href="https://www.youtube.com/@revanzaaxcell" target="_blank" rel="noopener">
+          <div class="left">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M21 12s0-3.6-.5-5a2.7 2.7 0 0 0-1.9-1.9C17.2 4.7 12 4.7 12 4.7s-5.2 0-6.6.4A2.7 2.7 0 0 0 3.5 7C3 8.4 3 12 3 12s0 3.6.5 5a2.7 2.7 0 0 0 1.9 1.9c1.4.4 6.6.4 6.6.4s5.2 0 6.6-.4a2.7 2.7 0 0 0 1.9-1.9c.5-1.4.5-5 .5-5Z"
+                      fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+                <path d="M10.5 9.7l5 2.3-5 2.3V9.7z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div style="min-width:0">
+              <div class="label">YouTube Channel</div>
+              <span class="hint">@revanzaaxcell</span>
+            </div>
+          </div>
+          <div class="right" aria-hidden="true">
+            <svg class="arrow" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </a>
 
-      <!-- Shopee (placeholder direct) -->
-      <a class="link-btn"
-         href="https://shopee.co.id/search?keyword=vanzsoftware"
-         target="_blank" rel="noopener">
-        <span class="btn-content">
-          <span class="btn-icon">
-            <!-- bag icon -->
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M7 9V7a5 5 0 0 1 10 0v2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-              <path d="M6 9h12l-1 12H7L6 9z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
-            </svg>
-          </span>
-          <span class="btn-text">Shopee <span class="btn-pill">vanzsoftware</span></span>
-        </span>
-      </a>
+        <!-- Shopee (sementara search keyword) -->
+        <a class="row" href="https://shopee.co.id/search?keyword=vanzsoftware" target="_blank" rel="noopener">
+          <div class="left">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M7 9V7a5 5 0 0 1 10 0v2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M6 9h12l-1 12H7L6 9z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div style="min-width:0">
+              <div class="label">Shopee Store</div>
+              <span class="hint">vanzsoftware (klik langsung)</span>
+            </div>
+          </div>
+          <div class="right" aria-hidden="true">
+            <svg class="arrow" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </a>
+      </div>
 
-      <div class="section-title">COMMUNITY</div>
-
-      <!-- Channel Telegram -->
-      <a class="link-btn"
-         href="https://t.me/VanzINFO"
-         target="_blank" rel="noopener">
-        <span class="btn-content">
-          <span class="btn-icon">
-            <!-- megaphone-ish -->
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M4 11v2a2 2 0 0 0 2 2h1l2 4h2l-1.2-4H16l4-4v-2l-4-4H6a2 2 0 0 0-2 2z"
-                    fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
-            </svg>
-          </span>
-          <span class="btn-text">Channel Telegram <span class="btn-pill">@VanzINFO</span></span>
-        </span>
-      </a>
+      <div class="back">
+        <!-- ganti href kalau mau balik ke halaman utama -->
+        <a href="https://vanzshop.com/#" rel="noopener">
+          <span aria-hidden="true">←</span> Kembali ke Menu Utama
+        </a>
+      </div>
 
       <div class="footer-note">
         © 2025 VanzShop.com · 🔒 Aman · ⚡ Cepat · 🛡️ Bergaransi
       </div>
+
     </section>
   </main>
 </body>
